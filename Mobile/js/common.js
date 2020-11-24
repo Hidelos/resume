@@ -73,7 +73,7 @@ $(document).ready(function(){
             var innerHeight = $(this).innerHeight();
             var scrollHeight = $(this).prop('scrollHeight');
         
-            if (sTop + innerHeight <= scrollHeight) 
+            if (sTop + innerHeight >= scrollHeight) 
                 return;
             
 
