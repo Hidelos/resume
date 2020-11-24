@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     var didScroll;
     var lsTop = 0;
-    var delta = 5;
+    var delta = 100;
 
     $(window).on('load scroll', function(){
         didScroll = true;
@@ -91,7 +91,7 @@ $(document).ready(function(){
             }
             
             
-            if (sTop <= 5) {
+            if (sTop <= 100) {
                 $Topview.removeClass('fixed').removeClass('up');
             $header.removeClass('fixed').removeClass('up');
             $subWrap.removeClass('fixed');
