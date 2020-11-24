@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     var didScroll;
     var lsTop = 0;
-    var delta = 20;
+    var delta = 40;
 
     $(window).on('load scroll', function(){
         didScroll = true;
@@ -58,16 +58,13 @@ $(document).ready(function(){
     //상단 m-header 고정
     function hasScrolled() {
         var sTop = $(this).scrollTop();
-        // var $header = $('.m-header');
-        // var $subTit = $('.sub-title-wrap');
-        // var $subStk = $('.sticky-tab-wrap')
         var $Topview = $('.top-view');
         var $header = $('.header-bottom');
         var $subWrap = $('.sub-wrap');
         var $subTit = $('.sub-wrap h2');
         var $subGnb = $('.sub-gnb-wrap > a');
 
-        if(sTop >= 20){
+        if(sTop >= 0){
             
             if(Math.abs(lsTop - sTop) <= delta)
                 return;
@@ -76,10 +73,10 @@ $(document).ready(function(){
 
             if (sTop > lsTop ) {
                 $Topview.addClass('fixed').removeClass('up');
-            $header.addClass('fixed').removeClass('up');
-            $subWrap.addClass('fixed');
-            $subTit.addClass('fixed').removeClass('up');
-            $subGnb.addClass('fixed').removeClass('up');
+                $header.addClass('fixed').removeClass('up');
+                $subWrap.addClass('fixed');
+                $subTit.addClass('fixed').removeClass('up');
+                $subGnb.addClass('fixed').removeClass('up');
             } else{
                 if(sTop + $(window).height() < $(document).height()){
                     $Topview.removeClass('fixed').addClass('up');
@@ -91,12 +88,12 @@ $(document).ready(function(){
             }
             
             
-            if (sTop <= 20) {
+            if (sTop <= 5) {
                 $Topview.removeClass('fixed').removeClass('up');
-            $header.removeClass('fixed').removeClass('up');
-            $subWrap.removeClass('fixed');
-            $subTit.removeClass('fixed').removeClass('up');
-            $subGnb.removeClass('fixed').removeClass('up');
+                $header.removeClass('fixed').removeClass('up');
+                $subWrap.removeClass('fixed');
+                $subTit.removeClass('fixed').removeClass('up');
+                $subGnb.removeClass('fixed').removeClass('up');
             }
             lsTop = sTop;
         }
