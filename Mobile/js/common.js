@@ -43,7 +43,7 @@ $(document).ready(function(){
     var didScroll;
     var lsTop = 0;
     //20201124 수정 시작
-    var delta = 50;
+    var delta = 60;
     //20201124 수정 끝
     $(window).on('load scroll', function(){
         didScroll = true;
@@ -69,11 +69,6 @@ $(document).ready(function(){
             
             if(Math.abs(lsTop - sTop) <= delta)
                 return;
-
-        
-            // if (Math.round( $(this).scrollTop()) >= $(document).height() - $(window).height()) 
-            //     return;
-            
 
             if (sTop > lsTop ) {
                 $Topview.addClass('fixed').removeClass('up');
