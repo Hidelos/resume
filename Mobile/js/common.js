@@ -71,7 +71,7 @@ $(document).ready(function(){
                 return;
 
         
-            if (Math.round( $(window).scrollTop()) == $(document).height() - $(window).height()) 
+            if (Math.round( $(window).scrollTop()) >= $(document).height() - $(window).height()) 
                 return;
             
 
