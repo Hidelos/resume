@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     var didScroll;
     var lsTop = 0;
-    var delta = 40;
+    var delta = 30;
 
     $(window).on('load scroll', function(){
         didScroll = true;
