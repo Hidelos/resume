@@ -70,10 +70,8 @@ $(document).ready(function(){
             if(Math.abs(lsTop - sTop) <= delta)
                 return;
 
-            var innerHeight = $(this).innerHeight();
-            var scrollHeight = $(this).prop('scrollHeight');
         
-            if (sTop + innerHeight >= scrollHeight) 
+            if (Math.round( $(window).scrollTop()) == $(document).height() - $(window).height()) 
                 return;
             
 
