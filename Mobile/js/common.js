@@ -42,8 +42,9 @@ $(document).ready(function(){
 
     var didScroll;
     var lsTop = 0;
-    var delta = 35;
-
+    //20201124 수정 시작
+    var delta = 40;
+    //20201124 수정 끝
     $(window).on('load scroll', function(){
         didScroll = true;
         var wTop = $(this).scrollTop();
