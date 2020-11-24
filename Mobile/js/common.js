@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     var didScroll;
     var lsTop = 0;
-    var delta = 30;
+    var delta = 35;
 
     $(window).on('load scroll', function(){
         didScroll = true;
@@ -196,7 +196,7 @@ var ui = {
             } else {
                 var filename = $(this).val().split('/').pop().split('\\').pop();   
             }
-            $(this).parents('.inputWrap').append('<div class="fileInfo"><span>'+filename+'</span><a href="javascript:;" class="fileDel"><img src="img/icon_loadFile_delete.png" alt="file delete"></a></div>');
+            $(this).parents('.inputWrap').append('<div class="fileInfo"><span>'+filename+'</span><a href="javascript:;" class="fileDel"><img src="img/tempocloud/icon_loadFile_delete.png" alt="file delete"></a></div>');
             $('.inputExp').hide();
         });
 
