@@ -43,7 +43,7 @@ $(document).ready(function(){
     var didScroll;
     var lsTop = 0;
     //20201124 수정 시작
-    var delta = 50;
+    var delta = 35;
     //20201124 수정 끝
     $(window).on('load scroll', function(){
         didScroll = true;
@@ -69,7 +69,12 @@ $(document).ready(function(){
             
             if(Math.abs(lsTop - sTop) <= delta)
                 return;
-            
+
+            var innerHeight = $(this).innerHeight();
+            var scrollHeight = $(this).prop('scrollHeight');
+        
+            if (sTop + innerHeight <= scrollHeight) 
+                return;
             
 
             if (sTop > lsTop ) {
