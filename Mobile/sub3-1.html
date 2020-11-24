@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+    <!--COMMON CSS -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!--COMMON JS -->
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <title>TEMPOCLOUD</title>
+</head>
+<body>
+
+    <!-- body-wrap -->
+    <div class="wrapper">
+        
+        <!-- header-wrap -->
+        <header class="header-wrap sub"><!-- sub페이지 일경우 header-wrap에 sub 넣어야 함-->
+            <div class="top-view">
+                <img src="img/img_logo_godo.svg" alt="NHN godo">
+            </div>
+            <div class="header">
+                <div class="header-bottom">
+                    <h1>
+                        <a href="#none">
+                            <img src="img/img_logo_shopby.svg" alt="shop by">
+                        </a>
+                    </h1>
+                    <a href="#none" class="btn-gnb-menu">メニューを開く</a>
+                </div>
+                <nav class="gnb-wrap">
+                    <div class="gnb">
+                        <ul class="depth-1">
+                            <li>
+                                <a href="#none">特徴</a>
+                            </li>
+                            <li>
+                                <a href="#none">ソリューション</a>
+                            </li>
+                            <li>
+                                <a href="#none">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dimmed"></div>
+                </nav>
+            </div>
+        </header>
+        <!-- //header-wrap -->
+
+        <div class="sub-wrap no-depth">
+            <h2>お問い合わせ</h2>
+        </div>
+        <!-- main-container -->
+        <main class="main-container">
+            <div class="cont-area">
+                <div class="emailForm">
+                    <div class="searchResultTit">ご要望やビジネスに合わせた提案をいたしますので<br>お気軽にお問い合わせください。</div>
+                    <form action="">
+                        <div class="clearfix col2 m-col1">
+                            <div class="col-cell">
+                                <div class="inputWrap require">
+                                    <label for="userName01" class="label">姓<em>*</em></label><!--200722 수정-->
+                                    <input type="text" id="userName01" class="inputTxt" placeholder="姓を入力してください。" autocomplete="off">                            
+                                </div>
+                                <p class="inputCaution" style="display: none;">姓の入力は必須です。</p><!--200722 수정-->
+                            </div>
+                            <div class="col-cell">
+                                <div class="inputWrap require">
+                                    <label for="userName02" class="label">名<em>*</em></label>
+                                    <input type="text" id="userName02" class="inputTxt" placeholder="名前を入力してください。" autocomplete="off">                            
+                                </div>
+                                <p class="inputCaution" style="display: none;">名の入力は必須です。</p>
+                            </div>
+                        </div>
+
+                        <div class="inputWrap">
+                            <label for="shopName" class="label">会社名</label>
+                            <input type="text" id="shopName" class="inputTxt" placeholder="所属する会社名を入力してください。" autocomplete="off"><!--200722 수정-->
+                        </div>
+
+                        <div class="inputWrap require">
+                            <label for="eamilAdress" class="label">メールアドレス<em>*</em></label>
+                            <input type="text" id="eamilAdress" class="inputTxt" placeholder="お間違えのないようご注意ください。" autocomplete="off"><!--200722 수정-->
+                        </div>
+                        <p class="inputCaution" style="display: none;">メールアドレスの入力は必須です。</p><!--200722 수정-->
+
+                        <div class="inputWrap">
+                            <label for="shopUrl" class="label">ショップURL</label>
+                            <!-- <span class="exTxt">http://</span> --><!--200722 수정-->
+                            <input type="text" id="shopUrl" class="inputTxt" placeholder="運用中のショップURLを入力してください。" autocomplete="off"><!--200722 수정-->
+                        </div>
+                        <div class="inputWrap require">
+                            <label for="shopbyId" class="label">お問い合わせ内容 <em>*</em></label>
+                            <textarea name="shopbyId" id="shopbyId" class="inputTxtArea" cols="30" rows="10" placeholder="できるだけ詳しく入力してください。"></textarea><!--200722 수정-->
+                        </div>
+                        <p class="inputCaution" style="display: none;">お問い合わせ内容の入力は必須です。</p>
+
+                        <div class="inputWrap clearfix">
+                            <span class="label">添付ファイル</span>
+                            <div class="inputTxt disabled AttachInput">ファイルをドラッグアンドドロップで添付できます。</div><!--200722 수정-->
+                            <input type="file" id="fileName" class="upLoadHide" multiple="multiple"> 
+                            <label for="fileName" class="AttachBtn">ファイルを選択</label> 
+                            <div class="inputExp">(10MB以下のファイルを5つまで)</div><!--200722 수정-->
+                        </div>
+                        <!--10mb 넘는 경우 노출-->
+                        <p class="inputCaution" style="display: none;">ひとつのファイルサイズは10MB以下で、ファイルの数は5つまでとなります。</p><!--200722 수정-->
+                        <p class="inputCaution" style="display: none;">登録可能なファイル形式:gif, png, bmp, jpeg, jpg, xlsx, xls, doc, hwp, zip, rar, alz, txt, pptx, word, csv, pdf, excel</p>
+                        
+
+                        <div class="inputWrap require">
+                            <span class="label">個人情報保護方針の同意<em>*</em></span><!--200722 수정-->
+                            <a href="https://nhngodo.co.jp/privacy" target="_blank" class="termBtn layerBtn">内容を見る</a>
+                            <input type="checkbox" name="eamilAgree" id="eamilAgree" class="wideCheckBox">
+                            <label for="eamilAgree">同意する</label>
+                        </div>
+                        <p class="inputCaution" style="display: none;">個人情報保護方針への同意は必須です。</p><!--200722 수정-->
+
+                        <div>
+                            <p class="emailFormTxt">dl_info@nhngodo.comを受信拒否されている場合はメールが届かないことがあります。<br>受信を許可する設定にしてください。</p><!--200722 수정-->
+                        </div>
+                        <div class="faqBtnWrap textAc">
+                            <button type="submit" class="btn_submit">送信</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+        <!-- //main-container -->
+
+        <!-- common-footer -->
+        <footer class="common-footer">
+            <div class="family_site">
+                <a href="#" onclick="return false;">Global Site</a>
+                <ul>
+                    <li><a href="https://www.godo.co.kr/" target="_blank">NHN godo</a></li>
+                    <li><a href="https://nhngodo.co.jp/" target="_blank">NHN godo JAPAN</a></li>
+                    <li><a href="http://www.nhn-japan.com/" target="_blank">NHN JAPAN</a></li>
+                    <li><a href="https://shopby.jp/" target="_blank">shop by</a></li>
+                </ul>
+            </div>
+            <div class="txt">
+                <p class="copyright">ⓒ NHN godo JAPAN Corp. All Rights Reserved.</p>
+                <img src="img/img_logo_footer.svg" alt="NHN godo">
+            </div>
+        </footer>
+        <!-- //common-footer -->
+
+    </div>
+    <!-- // body-wrap -->
+
+</body>
+</html>
