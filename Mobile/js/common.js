@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     var didScroll;
     var lsTop = 0;
-    var delta = 40;
+    var delta = 20;
 
     $(window).on('load scroll', function(){
         didScroll = true;
@@ -67,7 +67,7 @@ $(document).ready(function(){
         var $subTit = $('.sub-wrap h2');
         var $subGnb = $('.sub-gnb-wrap > a');
 
-        if(sTop >= 0){
+        if(sTop >= 20){
             
             if(Math.abs(lsTop - sTop) <= delta)
                 return;
@@ -91,7 +91,7 @@ $(document).ready(function(){
             }
             
             
-            if (sTop <= 40) {
+            if (sTop <= 20) {
                 $Topview.removeClass('fixed').removeClass('up');
             $header.removeClass('fixed').removeClass('up');
             $subWrap.removeClass('fixed');
