@@ -43,7 +43,7 @@ $(document).ready(function(){
     var didScroll;
     var lsTop = 0;
     //20201124 수정 시작
-    var delta = 10;
+    var delta = 50;
     //20201124 수정 끝
     $(window).on('load scroll', function(){
         didScroll = true;
@@ -71,8 +71,8 @@ $(document).ready(function(){
                 return;
 
         
-            if (Math.round( $(this).scrollTop()) >= $(document).height() - $(window).height()) 
-                return;
+            // if (Math.round( $(this).scrollTop()) >= $(document).height() - $(window).height()) 
+            //     return;
             
 
             if (sTop > lsTop ) {
